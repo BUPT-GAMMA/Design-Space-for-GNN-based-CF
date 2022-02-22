@@ -1,0 +1,6 @@
+gnn.msg m ['identity','hadamard']
+gnn.layer_type g ['none','sageconv']
+gnn.layers_mp l [1,2]
+model.edge_decoding in ['concat','summation']
+gnn.act a ['identity','relu','sigmoid']
+gnn.component_num cn [1,4]

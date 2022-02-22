@@ -1,0 +1,49 @@
+# The recommended basic settings for GNN
+out_dir: results
+device: auto
+dataset:
+  format: PyG
+  load_type: pointwise
+  standardization: False
+  name: amazon-sports
+  task: link_pred
+  task_type: regression
+  transductive: True
+  split: [0.8, 0.1, 0.1]  
+  node_encoder: True
+  node_encoder_name: one-hot
+  edge_negative_sampling_ratio: 0.0
+  encoder_dim: 64
+train:
+  batch_size: 4096
+  eval_period: 20
+  ckpt_period: 20
+  ckpt_clean: False
+model:
+  type: mcgnn
+  eval_type: non-ranking
+  loss_fun: mse
+  edge_decoding: concat
+  size_average: mean
+gnn:
+  component_num: 1
+  component_aggr: att
+  layers_pre_mp: 0
+  layers_mp: 2
+  layers_post_mp: 1
+  dim_inner: 64
+  layer_type: none
+  stage_type: mean
+  act: relu
+  dropout: 0.0
+  msg: identity
+  batchnorm: True 
+  l2norm: True
+optim:
+  optimizer: adam
+  base_lr: 0.01
+  max_epoch: 160
+  weight_decay: 5e-3
+topk: 20
+metric_best: rmse
+skip_existing_exp: False

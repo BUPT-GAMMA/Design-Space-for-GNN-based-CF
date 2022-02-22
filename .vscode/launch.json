@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                // "--cfg", "configs/design_testlink_grid_act/design_testlink-sample=act-format=PyG-task=link_pred-trans=True-feature=-label=-batch=16-l_mp=2-stage=skipconcat-bn=True-act=prelu-drop=0.6-agg=add-optim=adam.yaml"
+                // "--cfg", "configs/design_rec2_grid_rec2/design_rec2-sample=act-dataset=flixster-initial_transformation_dimension=256-neg_ratio=2.0-interaction_function=concat-layers_mp=2-layer_type=ginconv-stage_type=skipmean-act=tanh.yaml"
+                // "--cfg", "configs/design_rec2_grid_rec2/design_rec2-sample=act-dataset=flixster-initial_transformation_dimension=64-neg_ratio=1.0-interaction_function=concat-layers_mp=1-layer_type=gatconv-stage_type=stack-act=prelu.yaml"
+                //"--cfg", "configs/example.yaml"
+                // "--cfg", "results/design_rec_5_13_grid_rec_5_13/design_rec_5_13-sample=max_epoch-dataset=amazon-cd-init_dim=256-neg_ratio=2.0-inter_func=concat-layers=3-msg=identity-att=True-agg=none-combine=identity-norm_adj=False-stage=skipmean-act=lrelu_01-max_epoch=200/1/config.yaml"
+                // "--cfg", "configs/design_rec_5_16_grid_rec_5_16/design_rec_5_16-sample=layers-dataset=gowalla-init_dim=64-neg_ratio=1.0-inter_func=dot-layers=2-msg=identity-att=False-agg=none-combine=concat-norm_adj=True-stage=stack-act=prelu.yaml"
+                
+            ],
+            "cwd": "${fileDirname}",
+            "justMyCode": false
+        }
+    ]
+}
